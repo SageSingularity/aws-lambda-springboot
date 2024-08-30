@@ -28,8 +28,8 @@ public class DatabaseStack extends Construct{
                 .instanceIdentifier("productapi")
                 .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_WITH_EGRESS).build())
                 .securityGroups(dbSecurityGroups)
-                .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_13_7).build()))
-                .instanceType(InstanceType.of(InstanceClass.T4G, InstanceSize.MICRO))
+                .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15).build()))
+                .instanceType(software.amazon.awscdk.services.ec2.InstanceType.of(InstanceClass.T4G, InstanceSize.MICRO))
                 .credentials(Credentials.fromSecret(dbSecret))
                 .build());
 

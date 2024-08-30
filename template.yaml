@@ -33,7 +33,7 @@ Resources:
     Properties:
       CodeUri: .
       Handler: com.product.api.StreamLambdaHandler::handleRequest
-      Runtime: java11
+      Runtime: java17
       AutoPublishAlias: production
       SnapStart:
         ApplyOn: PublishedVersions

@@ -1,6 +1,6 @@
 package com.product.api.core;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "products")
